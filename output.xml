@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.5 on win32)" generated="2026-04-29T21:34:57.607494" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\repositorio\qa-fullstack-tests\tests">
+<suite id="s1-s1" name="Cart" source="C:\repositorio\qa-fullstack-tests\tests\cart.robot">
+<test id="s1-s1-t1" name="Fluxo completo carrinho" line="10">
+<kw name="Abrir navegador" owner="base" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:34:58.370062" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-29T21:34:58.369217" elapsed="3.705990"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.075555" elapsed="0.067612"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:34:58.365995" elapsed="3.777435"/>
+</kw>
+<kw name="Fazer login" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.147945" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.147000" elapsed="0.181443"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.329682" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.329233" elapsed="0.130820"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.461618" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.460569" elapsed="0.173115"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:35:02.144563" elapsed="0.489372"/>
+</kw>
+<kw name="Adicionar produto ao carrinho" owner="cart_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.636009" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.635495" elapsed="0.201952"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:35:02.634543" elapsed="0.203075"/>
+</kw>
+<kw name="Ir para carrinho" owner="cart_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.838822" level="INFO">Clicking element 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.838576" elapsed="0.119663"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:35:02.838117" elapsed="0.120493"/>
+</kw>
+<kw name="Validar produto no carrinho" owner="cart_page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:02.991293" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>Sauce Labs Backpack</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.960407" elapsed="0.031042"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-29T21:35:03.015319" level="INFO">Current page contains text '$29.99'.</msg>
+<arg>$29.99</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-04-29T21:35:02.991808" elapsed="0.023649"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:35:02.959420" elapsed="0.056197"/>
+</kw>
+<kw name="Fechar navegador" owner="base" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-04-29T21:35:03.016756" elapsed="2.301195"/>
+</kw>
+<status status="PASS" start="2026-04-29T21:35:03.016301" elapsed="2.302120"/>
+</kw>
+<tag>cart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-04-29T21:34:58.363958" elapsed="6.955240"/>
+</test>
+<status status="PASS" start="2026-04-29T21:34:57.661052" elapsed="7.661596"/>
+</suite>
+<status status="PASS" start="2026-04-29T21:34:57.609817" elapsed="7.717046"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cart</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Cart">Tests.Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
