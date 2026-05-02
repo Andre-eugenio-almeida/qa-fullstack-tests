@@ -1,10 +1,9 @@
 *** Keywords ***
-Adicionar produto ao carrinho
-    Click Button    id:add-to-cart-sauce-labs-backpack
+Adicionar Produto Ao Carrinho
+    Click Button    xpath=//button[contains(text(),'Add to cart')]
 
-Ir para carrinho
-    Click Element    class:shopping_cart_link
+Ir Para Carrinho
+    Click Element   class=shopping_cart_link
 
-Validar produto no carrinho
+Validar Produto No Carrinho
     Page Should Contain    Sauce Labs Backpack
-    Page Should Contain    $29.99

@@ -3,13 +3,16 @@ Resource    ../resources/base.robot
 Resource    ../resources/pages/login_page.robot
 Resource    ../resources/pages/cart_page.robot
 
-Test Setup       Abrir navegador
-Test Teardown    Fechar navegador
+Test Setup       Abrir Navegador
+Test Teardown    Fechar Navegador
+
 
 *** Test Cases ***
-Fluxo completo carrinho
+Fluxo Completo Carrinho
+    [Documentation]    Valida fluxo completo de compra no e-commerce
     [Tags]    smoke    cart
-    Fazer login
-    Adicionar produto ao carrinho
-    Ir para carrinho
-    Validar produto no carrinho
+
+    Fazer Login
+    Adicionar Produto Ao Carrinho
+    Ir Para Carrinho
+    Validar Produto No Carrinho
