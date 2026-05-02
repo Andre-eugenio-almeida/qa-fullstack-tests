@@ -72,6 +72,18 @@ Após execução, acesse:
 
 ---
 
+##  Test Execution
+
+![Test Execution](assets/test-run.png)
+
+---
+
+## CI/CD
+
+Testes preparados para execução automatizada via GitHub Actions.
+
+---
+
 ##  Objetivo
 
 Projeto desenvolvido para prática de automação de testes web com foco em QA.

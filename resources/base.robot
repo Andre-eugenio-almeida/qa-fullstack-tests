@@ -13,4 +13,5 @@ Abrir Navegador
     Maximize Browser Window
 
 Fechar Navegador
+    Capture Page Screenshot
     Close Browser
