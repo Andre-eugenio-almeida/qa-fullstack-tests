@@ -1,12 +1,10 @@
-#  QA Fullstack Tests - Robot Framework
+### QA Automation Project - E2E Tests (Robot Framework)
 
-Projeto de automação de testes utilizando **Robot Framework + SeleniumLibrary**.
+Automação de testes end-to-end desenvolvida com Robot Framework + SeleniumLibrary, simulando o fluxo completo de compra em um e-commerce (login, adição ao carrinho e validação).
 
----
+Projeto estruturado seguindo boas práticas de automação, com separação por camadas e reutilização de keywords.
 
-##  Estrutura do Projeto
-
-```
+### Estrutura do Projeto
 qa-fullstack-tests/
 │
 ├── tests/
@@ -21,75 +19,57 @@ qa-fullstack-tests/
 ├── reports/
 ├── requirements.txt
 └── README.md
-```
+### Cenários Automatizados
+Login de usuário
+Adição de produto ao carrinho
+Navegação para página de carrinho
+Validação de produto adicionado
+⚙️ Tecnologias Utilizadas
+Robot Framework
+SeleniumLibrary
+Python
+Git & GitHub
 
----
 
-## ▶ Como executar os testes
-
-1. Criar ambiente virtual:
-
-```
+### Como executar os testes
+1. Criar ambiente virtual
 python -m venv venv
-```
-
-2. Ativar:
-
-Windows:
-
-```
+2. Ativar ambiente (Windows)
 venv\Scripts\activate
-```
-
-3. Instalar dependências:
-
-```
+3. Instalar dependências
 pip install -r requirements.txt
-```
-
-4. Rodar testes:
-
-```
+4. Executar testes
 python -m robot -d reports tests/
-```
 
----
 
-##  Tecnologias utilizadas
+### Relatórios
+Após a execução, os relatórios são gerados automaticamente:
 
-* Robot Framework
-* SeleniumLibrary
-* Python
+reports/log.html
+reports/report.html
+Execução dos Testes
 
----
+### CI/CD
 
-##  Relatórios
+Pipeline preparado para execução automatizada via GitHub Actions, permitindo validação contínua dos testes a cada commit.
 
-Após execução, acesse:
+### Objetivo
 
-* `reports/log.html`
-* `reports/report.html`
+Este projeto foi desenvolvido com foco em:
 
----
+Prática de automação de testes web
+Aplicação de boas práticas (Page Object Model)
+Estruturação de testes escaláveis
+Simulação de fluxo real de negócio
 
-##  Test Execution
 
-![Test Execution](assets/test-run.png)
+### Próximos Passos
+Execução em modo headless
+Integração completa com CI/CD
+Execução paralela de testes
+Geração automática de evidências
 
----
 
-## CI/CD
-
-Testes preparados para execução automatizada via GitHub Actions.
-
----
-
-##  Objetivo
-
-Projeto desenvolvido para prática de automação de testes web com foco em QA.
-
----
-
-##  Autor
+Autor:
 
 Andre Almeida (Tocha)
